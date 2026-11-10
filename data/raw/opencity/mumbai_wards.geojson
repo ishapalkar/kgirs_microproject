@@ -1,0 +1,1090 @@
+{
+  "type": "FeatureCollection",
+  "name": "Mumbai_BMC_24_Wards_Heat_Profile",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "A",
+        "ward_name": "Colaba / Fort",
+        "zone": "South Mumbai",
+        "population_total": 185014,
+        "population_density_per_sqkm": 14750,
+        "children_under_5_pct": 5.8,
+        "elderly_60_plus_pct": 12.4,
+        "slum_population_pct": 18.5,
+        "mean_lst_celsius": 33.8,
+        "max_lst_celsius": 36.2,
+        "mean_ndvi": 0.28,
+        "era5_t2m": 33.1,
+        "era5_rh": 72.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.815,
+              18.905
+            ],
+            [
+              72.838,
+              18.905
+            ],
+            [
+              72.845,
+              18.935
+            ],
+            [
+              72.83,
+              18.945
+            ],
+            [
+              72.82,
+              18.93
+            ],
+            [
+              72.815,
+              18.905
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "B",
+        "ward_name": "Sandhurst Road / Dongri",
+        "zone": "South Mumbai",
+        "population_total": 127290,
+        "population_density_per_sqkm": 52000,
+        "children_under_5_pct": 7.1,
+        "elderly_60_plus_pct": 9.8,
+        "slum_population_pct": 32.0,
+        "mean_lst_celsius": 37.1,
+        "max_lst_celsius": 39.8,
+        "mean_ndvi": 0.11,
+        "era5_t2m": 34.0,
+        "era5_rh": 69.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.83,
+              18.945
+            ],
+            [
+              72.845,
+              18.945
+            ],
+            [
+              72.848,
+              18.962
+            ],
+            [
+              72.832,
+              18.962
+            ],
+            [
+              72.83,
+              18.945
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "C",
+        "ward_name": "Marine Lines / Kalbadevi",
+        "zone": "South Mumbai",
+        "population_total": 166161,
+        "population_density_per_sqkm": 91800,
+        "children_under_5_pct": 6.2,
+        "elderly_60_plus_pct": 11.2,
+        "slum_population_pct": 21.4,
+        "mean_lst_celsius": 36.4,
+        "max_lst_celsius": 38.9,
+        "mean_ndvi": 0.09,
+        "era5_t2m": 33.6,
+        "era5_rh": 70.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.818,
+              18.94
+            ],
+            [
+              72.83,
+              18.94
+            ],
+            [
+              72.832,
+              18.955
+            ],
+            [
+              72.82,
+              18.955
+            ],
+            [
+              72.818,
+              18.94
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "D",
+        "ward_name": "Grant Road / Malabar Hill",
+        "zone": "South Mumbai",
+        "population_total": 346866,
+        "population_density_per_sqkm": 43100,
+        "children_under_5_pct": 5.4,
+        "elderly_60_plus_pct": 13.8,
+        "slum_population_pct": 16.2,
+        "mean_lst_celsius": 33.2,
+        "max_lst_celsius": 35.8,
+        "mean_ndvi": 0.36,
+        "era5_t2m": 33.0,
+        "era5_rh": 73.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.795,
+              18.945
+            ],
+            [
+              72.818,
+              18.945
+            ],
+            [
+              72.822,
+              18.975
+            ],
+            [
+              72.802,
+              18.975
+            ],
+            [
+              72.795,
+              18.945
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "E",
+        "ward_name": "Byculla / Mumbai Central",
+        "zone": "South Mumbai",
+        "population_total": 393286,
+        "population_density_per_sqkm": 53200,
+        "children_under_5_pct": 7.4,
+        "elderly_60_plus_pct": 8.9,
+        "slum_population_pct": 38.5,
+        "mean_lst_celsius": 37.9,
+        "max_lst_celsius": 40.7,
+        "mean_ndvi": 0.14,
+        "era5_t2m": 34.4,
+        "era5_rh": 68.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.822,
+              18.96
+            ],
+            [
+              72.846,
+              18.96
+            ],
+            [
+              72.85,
+              18.988
+            ],
+            [
+              72.824,
+              18.988
+            ],
+            [
+              72.822,
+              18.96
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "F/South",
+        "ward_name": "Parel / Sewri",
+        "zone": "South Central Mumbai",
+        "population_total": 360972,
+        "population_density_per_sqkm": 39400,
+        "children_under_5_pct": 6.8,
+        "elderly_60_plus_pct": 10.1,
+        "slum_population_pct": 41.2,
+        "mean_lst_celsius": 38.2,
+        "max_lst_celsius": 41.3,
+        "mean_ndvi": 0.16,
+        "era5_t2m": 34.6,
+        "era5_rh": 67.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.828,
+              18.985
+            ],
+            [
+              72.858,
+              18.985
+            ],
+            [
+              72.862,
+              19.012
+            ],
+            [
+              72.832,
+              19.012
+            ],
+            [
+              72.828,
+              18.985
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "F/North",
+        "ward_name": "Matunga / Sion / Wadala",
+        "zone": "South Central Mumbai",
+        "population_total": 529003,
+        "population_density_per_sqkm": 40900,
+        "children_under_5_pct": 7.6,
+        "elderly_60_plus_pct": 9.2,
+        "slum_population_pct": 49.3,
+        "mean_lst_celsius": 38.7,
+        "max_lst_celsius": 41.9,
+        "mean_ndvi": 0.21,
+        "era5_t2m": 34.9,
+        "era5_rh": 66.8
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.842,
+              19.01
+            ],
+            [
+              72.875,
+              19.01
+            ],
+            [
+              72.878,
+              19.048
+            ],
+            [
+              72.845,
+              19.048
+            ],
+            [
+              72.842,
+              19.01
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "G/South",
+        "ward_name": "Worli / Lower Parel",
+        "zone": "South Central Mumbai",
+        "population_total": 379927,
+        "population_density_per_sqkm": 37800,
+        "children_under_5_pct": 6.5,
+        "elderly_60_plus_pct": 10.4,
+        "slum_population_pct": 36.8,
+        "mean_lst_celsius": 36.2,
+        "max_lst_celsius": 38.8,
+        "mean_ndvi": 0.18,
+        "era5_t2m": 33.8,
+        "era5_rh": 71.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.808,
+              18.988
+            ],
+            [
+              72.832,
+              18.988
+            ],
+            [
+              72.835,
+              19.022
+            ],
+            [
+              72.812,
+              19.022
+            ],
+            [
+              72.808,
+              18.988
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "G/North",
+        "ward_name": "Dharavi / Dadar / Mahim",
+        "zone": "North Central Mumbai",
+        "population_total": 599039,
+        "population_density_per_sqkm": 66100,
+        "children_under_5_pct": 8.1,
+        "elderly_60_plus_pct": 8.0,
+        "slum_population_pct": 68.4,
+        "mean_lst_celsius": 39.8,
+        "max_lst_celsius": 43.1,
+        "mean_ndvi": 0.14,
+        "era5_t2m": 35.5,
+        "era5_rh": 65.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.832,
+              19.02
+            ],
+            [
+              72.86,
+              19.02
+            ],
+            [
+              72.865,
+              19.055
+            ],
+            [
+              72.835,
+              19.055
+            ],
+            [
+              72.832,
+              19.02
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "H/East",
+        "ward_name": "Bandra East / Santacruz East",
+        "zone": "Western Suburbs",
+        "population_total": 557239,
+        "population_density_per_sqkm": 41200,
+        "children_under_5_pct": 7.3,
+        "elderly_60_plus_pct": 8.7,
+        "slum_population_pct": 52.1,
+        "mean_lst_celsius": 38.5,
+        "max_lst_celsius": 41.6,
+        "mean_ndvi": 0.19,
+        "era5_t2m": 35.1,
+        "era5_rh": 67.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.842,
+              19.05
+            ],
+            [
+              72.872,
+              19.05
+            ],
+            [
+              72.875,
+              19.085
+            ],
+            [
+              72.845,
+              19.085
+            ],
+            [
+              72.842,
+              19.05
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "H/West",
+        "ward_name": "Bandra West / Khar West",
+        "zone": "Western Suburbs",
+        "population_total": 307581,
+        "population_density_per_sqkm": 26600,
+        "children_under_5_pct": 5.9,
+        "elderly_60_plus_pct": 12.8,
+        "slum_population_pct": 24.5,
+        "mean_lst_celsius": 34.6,
+        "max_lst_celsius": 37.1,
+        "mean_ndvi": 0.27,
+        "era5_t2m": 33.4,
+        "era5_rh": 72.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.818,
+              19.048
+            ],
+            [
+              72.842,
+              19.048
+            ],
+            [
+              72.845,
+              19.085
+            ],
+            [
+              72.822,
+              19.085
+            ],
+            [
+              72.818,
+              19.048
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "K/East",
+        "ward_name": "Andheri East / Marol",
+        "zone": "Western Suburbs",
+        "population_total": 823885,
+        "population_density_per_sqkm": 33200,
+        "children_under_5_pct": 7.4,
+        "elderly_60_plus_pct": 8.6,
+        "slum_population_pct": 46.8,
+        "mean_lst_celsius": 39.4,
+        "max_lst_celsius": 42.6,
+        "mean_ndvi": 0.17,
+        "era5_t2m": 35.8,
+        "era5_rh": 64.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.848,
+              19.085
+            ],
+            [
+              72.885,
+              19.085
+            ],
+            [
+              72.89,
+              19.145
+            ],
+            [
+              72.852,
+              19.145
+            ],
+            [
+              72.848,
+              19.085
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "K/West",
+        "ward_name": "Andheri West / Juhu / Versova",
+        "zone": "Western Suburbs",
+        "population_total": 749364,
+        "population_density_per_sqkm": 31900,
+        "children_under_5_pct": 6.3,
+        "elderly_60_plus_pct": 11.5,
+        "slum_population_pct": 31.2,
+        "mean_lst_celsius": 35.7,
+        "max_lst_celsius": 38.4,
+        "mean_ndvi": 0.22,
+        "era5_t2m": 34.2,
+        "era5_rh": 70.1
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.815,
+              19.085
+            ],
+            [
+              72.85,
+              19.085
+            ],
+            [
+              72.855,
+              19.155
+            ],
+            [
+              72.818,
+              19.155
+            ],
+            [
+              72.815,
+              19.085
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "L",
+        "ward_name": "Kurla / Sakinaka",
+        "zone": "Eastern Suburbs",
+        "population_total": 902221,
+        "population_density_per_sqkm": 57800,
+        "children_under_5_pct": 8.2,
+        "elderly_60_plus_pct": 7.4,
+        "slum_population_pct": 64.7,
+        "mean_lst_celsius": 40.5,
+        "max_lst_celsius": 43.8,
+        "mean_ndvi": 0.12,
+        "era5_t2m": 36.2,
+        "era5_rh": 63.8
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.868,
+              19.055
+            ],
+            [
+              72.898,
+              19.055
+            ],
+            [
+              72.905,
+              19.108
+            ],
+            [
+              72.872,
+              19.108
+            ],
+            [
+              72.868,
+              19.055
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "M/East",
+        "ward_name": "Govandi / Mankhurd / Shivaji Nagar",
+        "zone": "Eastern Suburbs",
+        "population_total": 807720,
+        "population_density_per_sqkm": 49200,
+        "children_under_5_pct": 9.4,
+        "elderly_60_plus_pct": 6.8,
+        "slum_population_pct": 77.5,
+        "mean_lst_celsius": 42.1,
+        "max_lst_celsius": 45.3,
+        "mean_ndvi": 0.1,
+        "era5_t2m": 36.8,
+        "era5_rh": 62.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.902,
+              19.035
+            ],
+            [
+              72.945,
+              19.035
+            ],
+            [
+              72.95,
+              19.085
+            ],
+            [
+              72.908,
+              19.085
+            ],
+            [
+              72.902,
+              19.035
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "M/West",
+        "ward_name": "Chembur / Tilak Nagar",
+        "zone": "Eastern Suburbs",
+        "population_total": 411893,
+        "population_density_per_sqkm": 29800,
+        "children_under_5_pct": 6.6,
+        "elderly_60_plus_pct": 10.8,
+        "slum_population_pct": 34.0,
+        "mean_lst_celsius": 37.4,
+        "max_lst_celsius": 40.2,
+        "mean_ndvi": 0.24,
+        "era5_t2m": 34.8,
+        "era5_rh": 67.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.88,
+              19.035
+            ],
+            [
+              72.908,
+              19.035
+            ],
+            [
+              72.912,
+              19.085
+            ],
+            [
+              72.885,
+              19.085
+            ],
+            [
+              72.88,
+              19.035
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "N",
+        "ward_name": "Ghatkopar / Vikhroli West",
+        "zone": "Eastern Suburbs",
+        "population_total": 622853,
+        "population_density_per_sqkm": 36500,
+        "children_under_5_pct": 7.1,
+        "elderly_60_plus_pct": 9.5,
+        "slum_population_pct": 44.6,
+        "mean_lst_celsius": 38.6,
+        "max_lst_celsius": 41.5,
+        "mean_ndvi": 0.19,
+        "era5_t2m": 35.4,
+        "era5_rh": 65.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.895,
+              19.075
+            ],
+            [
+              72.928,
+              19.075
+            ],
+            [
+              72.932,
+              19.12
+            ],
+            [
+              72.898,
+              19.12
+            ],
+            [
+              72.895,
+              19.075
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "P/South",
+        "ward_name": "Goregaon / Aarey Colony",
+        "zone": "Western Suburbs",
+        "population_total": 463777,
+        "population_density_per_sqkm": 21800,
+        "children_under_5_pct": 6.7,
+        "elderly_60_plus_pct": 10.2,
+        "slum_population_pct": 35.5,
+        "mean_lst_celsius": 35.2,
+        "max_lst_celsius": 38.0,
+        "mean_ndvi": 0.38,
+        "era5_t2m": 34.5,
+        "era5_rh": 68.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.835,
+              19.145
+            ],
+            [
+              72.885,
+              19.145
+            ],
+            [
+              72.89,
+              19.182
+            ],
+            [
+              72.838,
+              19.182
+            ],
+            [
+              72.835,
+              19.145
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "P/North",
+        "ward_name": "Malad / Malwani",
+        "zone": "Western Suburbs",
+        "population_total": 941366,
+        "population_density_per_sqkm": 49800,
+        "children_under_5_pct": 8.0,
+        "elderly_60_plus_pct": 8.1,
+        "slum_population_pct": 58.2,
+        "mean_lst_celsius": 39.7,
+        "max_lst_celsius": 43.0,
+        "mean_ndvi": 0.16,
+        "era5_t2m": 35.7,
+        "era5_rh": 66.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.818,
+              19.165
+            ],
+            [
+              72.868,
+              19.165
+            ],
+            [
+              72.872,
+              19.208
+            ],
+            [
+              72.822,
+              19.208
+            ],
+            [
+              72.818,
+              19.165
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "R/South",
+        "ward_name": "Kandivali / Charkop",
+        "zone": "Western Suburbs",
+        "population_total": 691229,
+        "population_density_per_sqkm": 38900,
+        "children_under_5_pct": 7.0,
+        "elderly_60_plus_pct": 9.9,
+        "slum_population_pct": 39.8,
+        "mean_lst_celsius": 37.8,
+        "max_lst_celsius": 40.9,
+        "mean_ndvi": 0.2,
+        "era5_t2m": 35.0,
+        "era5_rh": 67.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.822,
+              19.195
+            ],
+            [
+              72.872,
+              19.195
+            ],
+            [
+              72.875,
+              19.228
+            ],
+            [
+              72.825,
+              19.228
+            ],
+            [
+              72.822,
+              19.195
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "R/Central",
+        "ward_name": "Borivali / Gorai",
+        "zone": "Western Suburbs",
+        "population_total": 562162,
+        "population_density_per_sqkm": 24200,
+        "children_under_5_pct": 6.1,
+        "elderly_60_plus_pct": 11.8,
+        "slum_population_pct": 27.6,
+        "mean_lst_celsius": 34.1,
+        "max_lst_celsius": 37.0,
+        "mean_ndvi": 0.35,
+        "era5_t2m": 33.9,
+        "era5_rh": 70.0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.82,
+              19.215
+            ],
+            [
+              72.88,
+              19.215
+            ],
+            [
+              72.885,
+              19.255
+            ],
+            [
+              72.825,
+              19.255
+            ],
+            [
+              72.82,
+              19.215
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "R/North",
+        "ward_name": "Dahisar",
+        "zone": "Western Suburbs",
+        "population_total": 431368,
+        "population_density_per_sqkm": 28400,
+        "children_under_5_pct": 6.8,
+        "elderly_60_plus_pct": 10.5,
+        "slum_population_pct": 36.2,
+        "mean_lst_celsius": 36.5,
+        "max_lst_celsius": 39.4,
+        "mean_ndvi": 0.25,
+        "era5_t2m": 34.6,
+        "era5_rh": 68.2
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.835,
+              19.245
+            ],
+            [
+              72.885,
+              19.245
+            ],
+            [
+              72.89,
+              19.28
+            ],
+            [
+              72.84,
+              19.28
+            ],
+            [
+              72.835,
+              19.245
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "S",
+        "ward_name": "Bhandup / Powai / IIT",
+        "zone": "Eastern Suburbs",
+        "population_total": 743783,
+        "population_density_per_sqkm": 23600,
+        "children_under_5_pct": 6.9,
+        "elderly_60_plus_pct": 9.4,
+        "slum_population_pct": 43.1,
+        "mean_lst_celsius": 35.8,
+        "max_lst_celsius": 38.6,
+        "mean_ndvi": 0.34,
+        "era5_t2m": 34.8,
+        "era5_rh": 67.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.895,
+              19.11
+            ],
+            [
+              72.955,
+              19.11
+            ],
+            [
+              72.96,
+              19.165
+            ],
+            [
+              72.9,
+              19.165
+            ],
+            [
+              72.895,
+              19.11
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ward_id": "T",
+        "ward_name": "Mulund / Nahur",
+        "zone": "Eastern Suburbs",
+        "population_total": 341463,
+        "population_density_per_sqkm": 21900,
+        "children_under_5_pct": 6.0,
+        "elderly_60_plus_pct": 12.1,
+        "slum_population_pct": 22.8,
+        "mean_lst_celsius": 36.1,
+        "max_lst_celsius": 39.0,
+        "mean_ndvi": 0.29,
+        "era5_t2m": 35.0,
+        "era5_rh": 66.5
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.925,
+              19.155
+            ],
+            [
+              72.975,
+              19.155
+            ],
+            [
+              72.98,
+              19.2
+            ],
+            [
+              72.93,
+              19.2
+            ],
+            [
+              72.925,
+              19.155
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

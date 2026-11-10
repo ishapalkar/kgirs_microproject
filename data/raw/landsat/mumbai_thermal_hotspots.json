@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Deonar Dumping Ground & Industrial Fringe",
+    "ward_id": "M/East",
+    "lat": 19.048,
+    "lon": 72.93,
+    "lst_celsius": 45.3,
+    "ndvi": 0.06,
+    "surface_type": "Bare Soil / Waste / Tin Roofs"
+  },
+  {
+    "name": "Govandi Shivaji Nagar Slum Cluster",
+    "ward_id": "M/East",
+    "lat": 19.059,
+    "lon": 72.924,
+    "lst_celsius": 44.1,
+    "ndvi": 0.08,
+    "surface_type": "Dense Tin-Roof Settlements"
+  },
+  {
+    "name": "Kurla Sakinaka Industrial Corridor",
+    "ward_id": "L",
+    "lat": 19.088,
+    "lon": 72.886,
+    "lst_celsius": 43.8,
+    "ndvi": 0.1,
+    "surface_type": "Concrete Warehouses / Asphalt"
+  },
+  {
+    "name": "Dharavi 13th Compound Tanneries",
+    "ward_id": "G/North",
+    "lat": 19.043,
+    "lon": 72.856,
+    "lst_celsius": 43.1,
+    "ndvi": 0.09,
+    "surface_type": "High Density Industrial Slum"
+  },
+  {
+    "name": "Malad Malwani Gate 8 Cluster",
+    "ward_id": "P/North",
+    "lat": 19.195,
+    "lon": 72.828,
+    "lst_celsius": 43.0,
+    "ndvi": 0.11,
+    "surface_type": "Informal Coastal Settlement"
+  },
+  {
+    "name": "Andheri MIDC Industrial Estate",
+    "ward_id": "K/East",
+    "lat": 19.121,
+    "lon": 72.871,
+    "lst_celsius": 42.6,
+    "ndvi": 0.12,
+    "surface_type": "Commercial Concrete Canyon"
+  },
+  {
+    "name": "Sion Wadala Truck Terminal",
+    "ward_id": "F/North",
+    "lat": 19.028,
+    "lon": 72.871,
+    "lst_celsius": 41.9,
+    "ndvi": 0.13,
+    "surface_type": "Asphalt Pavement & Metal Logistics"
+  },
+  {
+    "name": "Parel Lalbaug Textile Mill Concrete Redev",
+    "ward_id": "F/South",
+    "lat": 18.995,
+    "lon": 72.839,
+    "lst_celsius": 41.3,
+    "ndvi": 0.15,
+    "surface_type": "Commercial Glass & Concrete Towers"
+  },
+  {
+    "name": "Kandivali Charkop Industrial Sector",
+    "ward_id": "R/South",
+    "lat": 19.215,
+    "lon": 72.835,
+    "lst_celsius": 40.9,
+    "ndvi": 0.16,
+    "surface_type": "Light Manufacturing Sheds"
+  },
+  {
+    "name": "Byculla Kamathipura Mixed Fabric",
+    "ward_id": "E",
+    "lat": 18.968,
+    "lon": 72.829,
+    "lst_celsius": 40.7,
+    "ndvi": 0.12,
+    "surface_type": "Extremely High Density Masonry"
+  },
+  {
+    "name": "Sanjay Gandhi National Park Core",
+    "ward_id": "R/Central",
+    "lat": 19.235,
+    "lon": 72.915,
+    "lst_celsius": 32.1,
+    "ndvi": 0.65,
+    "surface_type": "Dense Tropical Deciduous Canopy"
+  },
+  {
+    "name": "Malabar Hill Hanging Gardens Canopy",
+    "ward_id": "D",
+    "lat": 18.956,
+    "lon": 72.805,
+    "lst_celsius": 32.8,
+    "ndvi": 0.52,
+    "surface_type": "Urban Forest / Maritime Air"
+  },
+  {
+    "name": "Aarey Milk Colony Forested Swathe",
+    "ward_id": "P/South",
+    "lat": 19.155,
+    "lon": 72.872,
+    "lst_celsius": 33.4,
+    "ndvi": 0.58,
+    "surface_type": "Mixed Canopy / Grassland"
+  }
+]

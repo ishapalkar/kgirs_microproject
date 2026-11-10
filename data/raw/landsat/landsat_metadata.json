@@ -1,0 +1,13 @@
+{
+  "satellite": "Landsat 8/9 OLI/TIRS-2 Collection 2 Level-2",
+  "path": 148,
+  "row": 47,
+  "acquisition_date": "2024-05-18",
+  "cloud_cover_pct": 2.1,
+  "spatial_resolution_meters": 30,
+  "formula_lst": "ST_B10 * 0.00341802 + 149.0 - 273.15",
+  "formula_ndvi": "(SR_B5 - SR_B4) / (SR_B5 + SR_B4)",
+  "mumbai_city_mean_lst_celsius": 37.6,
+  "mumbai_city_max_lst_celsius": 45.3,
+  "mumbai_city_min_lst_celsius": 31.8
+}

@@ -1,0 +1,60 @@
+{
+  "statuses": {
+    "real": "Taken directly from a published dataset.",
+    "derived": "Calculated by this project from real data (e.g. density = population / polygon area).",
+    "estimate": "Hand-entered representative value. Not computed from satellite imagery.",
+    "illustrative": "Example records to demonstrate a feature. Not an official list.",
+    "summary": "A shortened version of a longer official document."
+  },
+  "fields": {
+    "Ward boundaries": {
+      "status": "real",
+      "source": "DataMeet Municipal_Spatial_Data on GitHub (BMC_Wards.geojson)"
+    },
+    "Ward area": {
+      "status": "derived",
+      "source": "Geodesic area of each ward polygon"
+    },
+    "Population, households, slum population, children 0-6, literacy": {
+      "status": "real",
+      "source": "Census of India 2011, ward table published by the MCGM Public Health Department",
+      "caveat": "Ward D's non-literate count is total minus literate, because the published row does not add up."
+    },
+    "Density, percentages, facilities per 100k people": {
+      "status": "derived",
+      "source": "Calculated from the rows above"
+    },
+    "Hospitals, parks, drinking-water points": {
+      "status": "real",
+      "source": "OpenStreetMap via the Overpass API (amenity=hospital, leisure=park, amenity=drinking_water)",
+      "caveat": "Volunteer-mapped and uneven. Drinking-water points are sparse, and 'hospital' includes small nursing homes and clinics."
+    },
+    "Surface temperature, vegetation (NDVI), air temperature, humidity": {
+      "status": "estimate",
+      "source": "Hand-entered representative values, not processed from Landsat or ERA5"
+    },
+    "Heat hotspots": {
+      "status": "estimate",
+      "source": "Hand-entered localities with representative temperatures"
+    },
+    "Cooling shelters": {
+      "status": "illustrative",
+      "source": "Example shelters, not an official BMC list"
+    },
+    "Policy documents": {
+      "status": "summary",
+      "source": "Team-written summaries of the official plans, not the full text"
+    }
+  },
+  "counts": {
+    "wards": 24,
+    "facilities_total": 1559,
+    "osm_points_outside_bmc_dropped": 576,
+    "by_type": {
+      "Hospital": 908,
+      "Park": 570,
+      "WaterPoint": 76,
+      "CoolingCentre": 5
+    }
+  }
+}

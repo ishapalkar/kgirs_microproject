@@ -1,22 +1,28 @@
-fastapi>=0.110.0
-uvicorn[standard]>=0.29.0
-pydantic>=2.6.0
-pydantic-settings>=2.2.0
-neo4j>=5.18.0
-langchain>=0.2.0
-langchain-community>=0.2.0
-langchain-core>=0.2.0
-langchain-experimental>=0.0.58
-langchain-google-genai>=1.0.3
-google-generativeai>=0.5.0
-numpy>=1.26.0
-pandas>=2.2.0
-shapely>=2.0.0
-geopandas>=0.14.0
-networkx>=3.2.0
-python-dotenv>=1.0.0
-requests>=2.31.0
-httpx>=0.27.0
-scipy>=1.12.0
-pytest>=8.0.0
-pytest-asyncio>=0.23.0
+# Web API
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+pydantic-settings>=2.2
+httpx>=0.27
+
+# Knowledge graph
+networkx>=3.2
+grand-cypher>=1.0          # Cypher interpreter for the in-memory graph
+neo4j>=5.18                # used automatically when a Neo4j server is running
+
+# Geography
+shapely>=2.0
+pyproj>=3.6
+
+# Document search
+numpy>=1.26
+rank-bm25>=0.2.2
+scikit-learn>=1.4
+pypdf>=4.0                 # lets you index official PDF plans
+fastembed>=0.3             # optional neural embeddings (downloads ~70 MB on first run)
+
+# LLM (optional; only needed when GEMINI_API_KEY is set)
+google-genai>=1.0
+
+# Tests
+pytest>=8.0

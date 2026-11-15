@@ -1,74 +1,181 @@
+@import '@fontsource-variable/bricolage-grotesque';
+@import '@fontsource-variable/public-sans';
+@import '@fontsource-variable/jetbrains-mono';
+@import 'leaflet/dist/leaflet.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .font-display {
-    font-family: 'General Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  }
+/*
+  Colour tokens (RGB channels so Tailwind can add alpha).
+  Neutrals are a cool "monsoon sky" grey. Teal is the only interactive colour.
+  The four risk colours are reserved for vulnerability and always appear with a text label.
+  Contrast checked: ink 16.5:1, muted 6.1:1, accent 6.1:1 on surface; risk fills >= 3.4:1.
+*/
+:root {
+  --bg: 243 245 246;
+  --surface: 255 255 255;
+  --sunken: 233 237 240;
+  --ink: 20 32 42;
+  --muted: 84 100 112;
+  --line: 216 223 228;
+  --line-strong: 128 144 156;
+  --accent: 14 106 133;
+  --accent-soft: 222 239 244;
+  --accent-ink: 255 255 255;
+  --risk-low: 39 133 120;
+  --risk-moderate: 176 122 8;
+  --risk-high: 206 88 20;
+  --risk-critical: 190 40 40;
+  --danger: 190 40 40;
+  /* Categorical colours for facility and graph node types (never used for risk) */
+  --cat-hospital: 91 95 199;
+  --cat-park: 63 143 58;
+  --cat-water: 47 111 192;
+  --cat-cooling: 142 79 192;
+  --cat-hotspot: 194 79 140;
+  --cat-population: 138 122 58;
+  --cat-document: 77 91 102;
+  --cat-section: 122 135 146;
+  --cat-alert: 176 122 42;
+  --shadow: 0 1px 2px rgb(20 32 42 / 0.06), 0 4px 16px rgb(20 32 42 / 0.06);
+  --sidebar-w: 248px;
+  color-scheme: light;
 }
+
+.dark {
+  --bg: 14 21 26;
+  --surface: 22 31 38;
+  --sunken: 30 41 50;
+  --ink: 230 236 239;
+  --muted: 152 168 179;
+  --line: 44 58 68;
+  --line-strong: 96 114 126;
+  --accent: 94 194 222;
+  --accent-soft: 20 52 64;
+  --accent-ink: 8 30 38;
+  --risk-low: 62 176 160;
+  --risk-moderate: 230 180 60;
+  --risk-high: 240 128 60;
+  --risk-critical: 232 78 72;
+  --danger: 240 110 100;
+  --cat-hospital: 140 144 240;
+  --cat-park: 110 190 100;
+  --cat-water: 100 160 235;
+  --cat-cooling: 190 140 235;
+  --cat-hotspot: 235 120 180;
+  --cat-population: 196 180 110;
+  --cat-document: 150 166 178;
+  --cat-section: 120 136 148;
+  --cat-alert: 220 170 90;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 6px 20px rgb(0 0 0 / 0.25);
+  color-scheme: dark;
+}
+
+/* Presentation mode: everything one step larger for a projector. */
+.present { font-size: 18px; }
 
 @layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-padding-block-start: 72px;
+  }
   body {
-    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: #FAFAFA;
-    color: #0A0A0A;
+    @apply bg-bg text-ink font-sans;
+    font-variant-numeric: tabular-nums;
   }
+  h1, h2, h3 { @apply font-display text-ink; text-wrap: balance; }
+  h1 { letter-spacing: -0.025em; font-weight: 700; }
+  h2 { letter-spacing: -0.015em; font-weight: 650; }
+  p { text-wrap: pretty; }
+  ::selection { background: rgb(var(--accent) / 0.25); }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'General Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    letter-spacing: -0.03em;
-    color: #0A0A0A;
+  /* One visible focus ring for every control. */
+  :focus-visible {
+    outline: 2px solid rgb(var(--accent));
+    outline-offset: 2px;
+    border-radius: 6px;
   }
+  button { -webkit-tap-highlight-color: transparent; }
 }
 
-/* Genesis Minimal Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #FAFAFA;
-}
-::-webkit-scrollbar-thumb {
-  background: #E8E8EC;
-  border-radius: 9999px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #9C9C9C;
+@layer components {
+  .card {
+    @apply bg-surface rounded-lg;
+    border: 1px solid rgb(var(--line));
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded px-4 font-medium text-sm whitespace-nowrap;
+    min-height: 40px;
+    transition-property: background-color, color, border-color, scale;
+    transition-duration: 150ms;
+    transition-timing-function: ease-out;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .btn:not(:disabled):active { scale: 0.96; }
+  }
+  .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+  .btn-primary { @apply btn bg-accent text-accent-ink; }
+  .btn-secondary { @apply btn bg-surface text-ink; border: 1px solid rgb(var(--line-strong) / 0.6); }
+  .btn-ghost { @apply btn text-muted; }
+  @media (hover: hover) {
+    .btn-primary:not(:disabled):hover { background: rgb(var(--accent) / 0.88); }
+    .btn-secondary:not(:disabled):hover, .btn-ghost:not(:disabled):hover { @apply bg-sunken text-ink; }
+  }
+  .input {
+    @apply w-full rounded bg-surface text-ink px-3 text-base;
+    min-height: 44px;
+    border: 1px solid rgb(var(--line-strong));
+  }
+  .input::placeholder { color: rgb(var(--muted)); }
+  .label { @apply text-sm font-medium text-ink; }
+  .hint { @apply text-sm text-muted; }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 text-sm text-ink bg-sunken;
+    min-height: 32px;
+    transition-property: background-color, color;
+    transition-duration: 150ms;
+  }
+  @media (hover: hover) { button.chip:hover { background: rgb(var(--accent-soft)); } }
+  .chip[aria-pressed='true'] { @apply bg-accent text-accent-ink; }
+  .code {
+    @apply font-mono text-sm rounded bg-sunken text-ink;
+    font-variant-ligatures: none;
+  }
+  .table-head { @apply text-left text-sm font-medium text-muted; }
 }
 
-/* Genesis Leaflet Map Styles */
-.leaflet-container {
-  width: 100%;
-  height: 100%;
-  background: #F3F4F6 !important;
-  font-family: 'DM Sans', -apple-system, sans-serif !important;
+/* Leaflet themed to the tokens */
+.leaflet-container { font-family: inherit; background: rgb(var(--sunken)); }
+.leaflet-tooltip.ward-tip {
+  @apply rounded text-sm text-ink bg-surface;
+  border: 1px solid rgb(var(--line));
+  box-shadow: var(--shadow);
+  padding: 8px 10px;
 }
-.leaflet-popup-content-wrapper {
-  background: #FFFFFF !important;
-  color: #0A0A0A !important;
-  border-radius: 8px !important;
-  border: 1px solid #E8E8EC !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
-  padding: 4px !important;
+.leaflet-tooltip.ward-tip::before { display: none; }
+.dark .leaflet-control-zoom a, .dark .leaflet-control-attribution {
+  background: rgb(var(--surface)); color: rgb(var(--ink));
 }
-.leaflet-popup-tip {
-  background: #FFFFFF !important;
+.dark .leaflet-control-attribution a { color: rgb(var(--accent)); }
+
+/* vis-network navigation buttons are images; keep the canvas themed */
+.vis-network:focus { outline: none; }
+
+/* Entrance used once per page load (overview hero). */
+@media (prefers-reduced-motion: no-preference) {
+  .rise { animation: rise 300ms ease-out both; }
+  .rise-2 { animation: rise 300ms ease-out 100ms both; }
+  .rise-3 { animation: rise 300ms ease-out 200ms both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(12px); filter: blur(4px); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rise, .rise-2, .rise-3 { animation: fade 200ms ease-out both; }
+  @keyframes fade { from { opacity: 0; } }
+  * { scroll-behavior: auto !important; }
 }
 
-/* Genesis Ward Label Badges */
-.ward-label-tooltip {
-  background: rgba(255, 255, 255, 0.96) !important;
-  border: 1px solid #E8E8EC !important;
-  color: #0A0A0A !important;
-  font-weight: 600 !important;
-  font-size: 11px !important;
-  padding: 2px 7px !important;
-  border-radius: 9999px !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
-  backdrop-filter: blur(4px) !important;
-}
-.ward-label-tooltip::before {
-  display: none !important;
-}
+/* Smoothly suppress all transitions during a theme switch */
+.no-transitions, .no-transitions * { transition: none !important; }

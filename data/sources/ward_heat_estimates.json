@@ -1,0 +1,218 @@
+{
+ "A": {
+  "ward_name": "Colaba / Fort",
+  "zone": "South Mumbai",
+  "mean_lst_celsius": 33.8,
+  "max_lst_celsius": 36.2,
+  "mean_ndvi": 0.28,
+  "era5_t2m": 33.1,
+  "era5_rh": 72.0
+ },
+ "B": {
+  "ward_name": "Sandhurst Road / Dongri",
+  "zone": "South Mumbai",
+  "mean_lst_celsius": 37.1,
+  "max_lst_celsius": 39.8,
+  "mean_ndvi": 0.11,
+  "era5_t2m": 34.0,
+  "era5_rh": 69.0
+ },
+ "C": {
+  "ward_name": "Marine Lines / Kalbadevi",
+  "zone": "South Mumbai",
+  "mean_lst_celsius": 36.4,
+  "max_lst_celsius": 38.9,
+  "mean_ndvi": 0.09,
+  "era5_t2m": 33.6,
+  "era5_rh": 70.5
+ },
+ "D": {
+  "ward_name": "Grant Road / Malabar Hill",
+  "zone": "South Mumbai",
+  "mean_lst_celsius": 33.2,
+  "max_lst_celsius": 35.8,
+  "mean_ndvi": 0.36,
+  "era5_t2m": 33.0,
+  "era5_rh": 73.0
+ },
+ "E": {
+  "ward_name": "Byculla / Mumbai Central",
+  "zone": "South Mumbai",
+  "mean_lst_celsius": 37.9,
+  "max_lst_celsius": 40.7,
+  "mean_ndvi": 0.14,
+  "era5_t2m": 34.4,
+  "era5_rh": 68.0
+ },
+ "F/South": {
+  "ward_name": "Parel / Sewri",
+  "zone": "South Central Mumbai",
+  "mean_lst_celsius": 38.2,
+  "max_lst_celsius": 41.3,
+  "mean_ndvi": 0.16,
+  "era5_t2m": 34.6,
+  "era5_rh": 67.5
+ },
+ "F/North": {
+  "ward_name": "Matunga / Sion / Wadala",
+  "zone": "South Central Mumbai",
+  "mean_lst_celsius": 38.7,
+  "max_lst_celsius": 41.9,
+  "mean_ndvi": 0.21,
+  "era5_t2m": 34.9,
+  "era5_rh": 66.8
+ },
+ "G/South": {
+  "ward_name": "Worli / Lower Parel",
+  "zone": "South Central Mumbai",
+  "mean_lst_celsius": 36.2,
+  "max_lst_celsius": 38.8,
+  "mean_ndvi": 0.18,
+  "era5_t2m": 33.8,
+  "era5_rh": 71.2
+ },
+ "G/North": {
+  "ward_name": "Dharavi / Dadar / Mahim",
+  "zone": "North Central Mumbai",
+  "mean_lst_celsius": 39.8,
+  "max_lst_celsius": 43.1,
+  "mean_ndvi": 0.14,
+  "era5_t2m": 35.5,
+  "era5_rh": 65.5
+ },
+ "H/East": {
+  "ward_name": "Bandra East / Santacruz East",
+  "zone": "Western Suburbs",
+  "mean_lst_celsius": 38.5,
+  "max_lst_celsius": 41.6,
+  "mean_ndvi": 0.19,
+  "era5_t2m": 35.1,
+  "era5_rh": 67.0
+ },
+ "H/West": {
+  "ward_name": "Bandra West / Khar West",
+  "zone": "Western Suburbs",
+  "mean_lst_celsius": 34.6,
+  "max_lst_celsius": 37.1,
+  "mean_ndvi": 0.27,
+  "era5_t2m": 33.4,
+  "era5_rh": 72.5
+ },
+ "K/East": {
+  "ward_name": "Andheri East / Marol",
+  "zone": "Western Suburbs",
+  "mean_lst_celsius": 39.4,
+  "max_lst_celsius": 42.6,
+  "mean_ndvi": 0.17,
+  "era5_t2m": 35.8,
+  "era5_rh": 64.2
+ },
+ "K/West": {
+  "ward_name": "Andheri West / Juhu / Versova",
+  "zone": "Western Suburbs",
+  "mean_lst_celsius": 35.7,
+  "max_lst_celsius": 38.4,
+  "mean_ndvi": 0.22,
+  "era5_t2m": 34.2,
+  "era5_rh": 70.1
+ },
+ "L": {
+  "ward_name": "Kurla / Sakinaka",
+  "zone": "Eastern Suburbs",
+  "mean_lst_celsius": 40.5,
+  "max_lst_celsius": 43.8,
+  "mean_ndvi": 0.12,
+  "era5_t2m": 36.2,
+  "era5_rh": 63.8
+ },
+ "M/East": {
+  "ward_name": "Govandi / Mankhurd / Shivaji Nagar",
+  "zone": "Eastern Suburbs",
+  "mean_lst_celsius": 42.1,
+  "max_lst_celsius": 45.3,
+  "mean_ndvi": 0.1,
+  "era5_t2m": 36.8,
+  "era5_rh": 62.5
+ },
+ "M/West": {
+  "ward_name": "Chembur / Tilak Nagar",
+  "zone": "Eastern Suburbs",
+  "mean_lst_celsius": 37.4,
+  "max_lst_celsius": 40.2,
+  "mean_ndvi": 0.24,
+  "era5_t2m": 34.8,
+  "era5_rh": 67.0
+ },
+ "N": {
+  "ward_name": "Ghatkopar / Vikhroli West",
+  "zone": "Eastern Suburbs",
+  "mean_lst_celsius": 38.6,
+  "max_lst_celsius": 41.5,
+  "mean_ndvi": 0.19,
+  "era5_t2m": 35.4,
+  "era5_rh": 65.0
+ },
+ "P/South": {
+  "ward_name": "Goregaon / Aarey Colony",
+  "zone": "Western Suburbs",
+  "mean_lst_celsius": 35.2,
+  "max_lst_celsius": 38.0,
+  "mean_ndvi": 0.38,
+  "era5_t2m": 34.5,
+  "era5_rh": 68.5
+ },
+ "P/North": {
+  "ward_name": "Malad / Malwani",
+  "zone": "Western Suburbs",
+  "mean_lst_celsius": 39.7,
+  "max_lst_celsius": 43.0,
+  "mean_ndvi": 0.16,
+  "era5_t2m": 35.7,
+  "era5_rh": 66.0
+ },
+ "R/South": {
+  "ward_name": "Kandivali / Charkop",
+  "zone": "Western Suburbs",
+  "mean_lst_celsius": 37.8,
+  "max_lst_celsius": 40.9,
+  "mean_ndvi": 0.2,
+  "era5_t2m": 35.0,
+  "era5_rh": 67.2
+ },
+ "R/Central": {
+  "ward_name": "Borivali / Gorai",
+  "zone": "Western Suburbs",
+  "mean_lst_celsius": 34.1,
+  "max_lst_celsius": 37.0,
+  "mean_ndvi": 0.35,
+  "era5_t2m": 33.9,
+  "era5_rh": 70.0
+ },
+ "R/North": {
+  "ward_name": "Dahisar",
+  "zone": "Western Suburbs",
+  "mean_lst_celsius": 36.5,
+  "max_lst_celsius": 39.4,
+  "mean_ndvi": 0.25,
+  "era5_t2m": 34.6,
+  "era5_rh": 68.2
+ },
+ "S": {
+  "ward_name": "Bhandup / Powai / IIT",
+  "zone": "Eastern Suburbs",
+  "mean_lst_celsius": 35.8,
+  "max_lst_celsius": 38.6,
+  "mean_ndvi": 0.34,
+  "era5_t2m": 34.8,
+  "era5_rh": 67.5
+ },
+ "T": {
+  "ward_name": "Mulund / Nahur",
+  "zone": "Eastern Suburbs",
+  "mean_lst_celsius": 36.1,
+  "max_lst_celsius": 39.0,
+  "mean_ndvi": 0.29,
+  "era5_t2m": 35.0,
+  "era5_rh": 66.5
+ }
+}

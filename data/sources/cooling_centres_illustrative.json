@@ -1,0 +1,72 @@
+[
+ {
+  "id": "SHELTER-001",
+  "name": "BMC M/East Ward Disaster Management Cooling Shelter (Govandi)",
+  "type": "CoolingCentre",
+  "category": "Official Emergency Cooling Shelter",
+  "ward_id": "M/East",
+  "lat": 19.057,
+  "lon": 72.92,
+  "capacity_persons": 250,
+  "is_air_conditioned": true,
+  "has_ors_distribution": true,
+  "activation_trigger": "Orange/Red Heat Alert",
+  "is_officially_designated": true
+ },
+ {
+  "id": "SHELTER-002",
+  "name": "Dharavi Transit Camp Municipal Community Heat Refuge",
+  "type": "CoolingCentre",
+  "category": "Official Emergency Cooling Shelter",
+  "ward_id": "G/North",
+  "lat": 19.046,
+  "lon": 72.851,
+  "capacity_persons": 300,
+  "is_air_conditioned": true,
+  "has_ors_distribution": true,
+  "activation_trigger": "Orange/Red Heat Alert",
+  "is_officially_designated": true
+ },
+ {
+  "id": "SHELTER-003",
+  "name": "Kurla Municipal School Emergency Heat Refuge Center",
+  "type": "CoolingCentre",
+  "category": "Official Emergency Cooling Shelter",
+  "ward_id": "L",
+  "lat": 19.072,
+  "lon": 72.882,
+  "capacity_persons": 200,
+  "is_air_conditioned": false,
+  "has_ors_distribution": true,
+  "activation_trigger": "Orange/Red Heat Alert",
+  "is_officially_designated": true
+ },
+ {
+  "id": "SHELTER-004",
+  "name": "Andheri MIDC Industrial Labor Cooling Center",
+  "type": "CoolingCentre",
+  "category": "Official Emergency Cooling Shelter",
+  "ward_id": "K/East",
+  "lat": 19.123,
+  "lon": 72.868,
+  "capacity_persons": 180,
+  "is_air_conditioned": true,
+  "has_ors_distribution": true,
+  "activation_trigger": "Orange/Red Heat Alert",
+  "is_officially_designated": true
+ },
+ {
+  "id": "SHELTER-005",
+  "name": "Malad Malwani Community Hall Cooling Refuge",
+  "type": "CoolingCentre",
+  "category": "Official Emergency Cooling Shelter",
+  "ward_id": "P/North",
+  "lat": 19.192,
+  "lon": 72.832,
+  "capacity_persons": 220,
+  "is_air_conditioned": false,
+  "has_ors_distribution": true,
+  "activation_trigger": "Orange/Red Heat Alert",
+  "is_officially_designated": true
+ }
+]

@@ -1,0 +1,26 @@
+{
+  "maharashtra_heat_action_plan_2024.md": {
+    "id": "DOC-MSHWAP-2024",
+    "title": "Maharashtra State Heat Wave Action Plan 2024",
+    "short": "MS-HWAP 2024",
+    "agency": "Government of Maharashtra, Dept. of Relief & Rehabilitation",
+    "year": 2024,
+    "kind": "summary"
+  },
+  "mumbai_climate_action_plan_2022.md": {
+    "id": "DOC-MCAP-2022",
+    "title": "Mumbai Climate Action Plan 2022",
+    "short": "MCAP 2022",
+    "agency": "Brihanmumbai Municipal Corporation (BMC)",
+    "year": 2022,
+    "kind": "summary"
+  },
+  "imd_heatwave_guidelines.md": {
+    "id": "DOC-IMD-HW",
+    "title": "IMD Heatwave Criteria",
+    "short": "IMD",
+    "agency": "India Meteorological Department",
+    "year": 2024,
+    "kind": "summary"
+  }
+}

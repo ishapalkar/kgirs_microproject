@@ -1,76 +1,73 @@
 """
-Knowledge Graph Ontology for HeatShield Mumbai
-==============================================
-Defines the node labels, relationship types, property schemas,
-and Neo4j DDL statements (constraints, indexes, and vector indexes).
+Knowledge-graph ontology: the node labels, relationship types and their properties.
+
+`SCHEMA_TEXT` is the same information written for the LLM, so it knows exactly which
+labels and properties exist when it writes Cypher.
 """
 
-from typing import List, Dict, Any
-from pydantic import BaseModel, Field
-
-
-# Canonical Node Labels
 LABEL_WARD = "Ward"
-LABEL_LOCALITY = "Locality"
-LABEL_HEAT_OBSERVATION = "HeatObservation"
-LABEL_HEAT_EVENT = "HeatEvent"
 LABEL_POPULATION_GROUP = "PopulationGroup"
 LABEL_HOSPITAL = "Hospital"
 LABEL_PARK = "Park"
 LABEL_WATER_POINT = "WaterPoint"
 LABEL_COOLING_CENTRE = "CoolingCentre"
+LABEL_LOCALITY = "Locality"
 LABEL_HEAT_ADVISORY = "HeatAdvisory"
 LABEL_DOCUMENT = "Document"
+LABEL_SECTION = "Section"
 LABEL_ORGANIZATION = "Organization"
 
-# Canonical Relationship Types
-REL_HAS_HEAT_EXPOSURE = "HAS_HEAT_EXPOSURE"
+ALL_LABELS = [
+    LABEL_WARD, LABEL_POPULATION_GROUP, LABEL_HOSPITAL, LABEL_PARK, LABEL_WATER_POINT,
+    LABEL_COOLING_CENTRE, LABEL_LOCALITY, LABEL_HEAT_ADVISORY, LABEL_DOCUMENT,
+    LABEL_SECTION, LABEL_ORGANIZATION,
+]
+
 REL_LOCATED_IN = "LOCATED_IN"
+REL_ADJACENT_TO = "ADJACENT_TO"
 REL_HAS_POPULATION_GROUP = "HAS_POPULATION_GROUP"
-REL_HAS_FACILITY = "HAS_FACILITY"
-REL_NEAR = "NEAR"
-REL_SERVES = "SERVES"
-REL_REPORTED_IN = "REPORTED_IN"
+REL_HAS_SECTION = "HAS_SECTION"
+REL_MENTIONS = "MENTIONS"
 REL_ISSUED_BY = "ISSUED_BY"
-REL_DOCUMENTED_IN = "DOCUMENTED_IN"
-REL_APPLIES_TO = "APPLIES_TO"
+REL_DEFINED_IN = "DEFINED_IN"
 
+FACILITY_LABELS = [LABEL_HOSPITAL, LABEL_PARK, LABEL_WATER_POINT, LABEL_COOLING_CENTRE]
 
-# Neo4j Schema Constraints & Indexes
 CYPHER_CONSTRAINTS = [
-    "CREATE CONSTRAINT ward_id_unique IF NOT EXISTS FOR (w:Ward) REQUIRE w.ward_id IS UNIQUE",
-    "CREATE CONSTRAINT locality_name_unique IF NOT EXISTS FOR (l:Locality) REQUIRE l.name IS UNIQUE",
-    "CREATE CONSTRAINT hospital_id_unique IF NOT EXISTS FOR (h:Hospital) REQUIRE h.id IS UNIQUE",
-    "CREATE CONSTRAINT park_id_unique IF NOT EXISTS FOR (p:Park) REQUIRE p.id IS UNIQUE",
-    "CREATE CONSTRAINT water_point_id_unique IF NOT EXISTS FOR (wp:WaterPoint) REQUIRE wp.id IS UNIQUE",
-    "CREATE CONSTRAINT cooling_centre_id_unique IF NOT EXISTS FOR (c:CoolingCentre) REQUIRE c.id IS UNIQUE",
-    "CREATE CONSTRAINT advisory_id_unique IF NOT EXISTS FOR (a:HeatAdvisory) REQUIRE a.id IS UNIQUE",
-    "CREATE CONSTRAINT document_id_unique IF NOT EXISTS FOR (d:Document) REQUIRE d.id IS UNIQUE",
-    "CREATE CONSTRAINT heat_event_id_unique IF NOT EXISTS FOR (e:HeatEvent) REQUIRE e.id IS UNIQUE",
+    f"CREATE CONSTRAINT {lbl.lower()}_id IF NOT EXISTS FOR (n:{lbl}) REQUIRE n.id IS UNIQUE"
+    for lbl in ALL_LABELS
 ]
 
-CYPHER_INDEXES = [
-    "CREATE INDEX ward_hvi_score_idx IF NOT EXISTS FOR (w:Ward) ON (w.hvi_score)",
-    "CREATE INDEX ward_mean_lst_idx IF NOT EXISTS FOR (w:Ward) ON (w.mean_lst_celsius)",
-    "CREATE INDEX locality_lst_idx IF NOT EXISTS FOR (l:Locality) ON (l.mean_lst_celsius)",
-    "CREATE INDEX facility_ward_idx IF NOT EXISTS FOR (f:Hospital) ON (f.ward_id)",
-    "CREATE INDEX cooling_centre_active_idx IF NOT EXISTS FOR (c:CoolingCentre) ON (c.is_officially_designated)",
-]
+SCHEMA_TEXT = """
+NODE LABELS AND PROPERTIES
+(:Ward) 24 BMC administrative wards
+    id ('WARD-M/East'), ward_id ('A','B','C','D','E','F/South','F/North','G/South','G/North','H/East','H/West',
+    'K/East','K/West','L','M/East','M/West','N','P/South','P/North','R/South','R/Central','R/North','S','T'),
+    ward_name (localities, e.g. 'Govandi / Mankhurd / Shivaji Nagar'), zone, area_km2,
+    population_total, households, population_density_per_sqkm, children_0_6_pct, slum_population,
+    slum_population_pct, literacy_pct, illiteracy_pct,
+    hospitals_count, parks_count, water_points_count, cooling_centres_count,
+    hospitals_per_100k, parks_per_100k, water_points_per_100k,
+    mean_lst_celsius, max_lst_celsius, mean_ndvi (estimates),
+    hvi_score (0-1), hvi_rank (1 = most vulnerable), vulnerability_category ('Critical','High','Moderate','Low'),
+    exposure_score, sensitivity_score, adaptive_capacity_score
+(:Hospital) id, name, ward_id, lat, lon, beds (often null), operator_type
+(:Park) id, name, ward_id, lat, lon
+(:WaterPoint) id, name, ward_id, lat, lon
+(:CoolingCentre) id, name, ward_id, lat, lon, capacity_persons, is_air_conditioned  (illustrative examples)
+(:Locality) id, name, ward_id, lat, lon, lst_celsius, ndvi, surface_type   (heat hotspots, estimates)
+(:PopulationGroup) id, name ('Children 0-6','Slum residents','Non-literate residents'), ward_id, count, share_pct
+(:HeatAdvisory) id, name ('Green Alert' ... 'Red Alert'), stage, description
+(:Document) id, title, agency, year
+(:Section) id, title, text, document_id
+(:Organization) id, name
 
-# Read-only Cypher query validation
-DISALLOWED_CYPHER_KEYWORDS = [
-    "CREATE", "MERGE", "DELETE", "DETACH", "DROP", "SET", "REMOVE",
-    "CALL dbms", "CALL apoc.schema", "ALTER", "GRANT", "REVOKE"
-]
-
-
-def is_cypher_read_only(query: str) -> bool:
-    """Ensures a user-supplied Cypher query cannot modify the database."""
-    query_upper = query.upper().strip()
-    if not query_upper.startswith("MATCH") and not query_upper.startswith("RETURN") and not query_upper.startswith("WITH") and not query_upper.startswith("SHOW"):
-        return False
-    for keyword in DISALLOWED_CYPHER_KEYWORDS:
-        # Check as whole keyword or token
-        if f" {keyword} " in f" {query_upper} " or query_upper.startswith(keyword):
-            return False
-    return True
+RELATIONSHIPS
+(:Hospital|Park|WaterPoint|CoolingCentre|Locality)-[:LOCATED_IN]->(:Ward)
+(:Ward)-[:ADJACENT_TO]->(:Ward)            (wards that share a border; stored in both directions)
+(:Ward)-[:HAS_POPULATION_GROUP]->(:PopulationGroup)
+(:Document)-[:HAS_SECTION]->(:Section)
+(:Section)-[:MENTIONS]->(:Ward)
+(:Document)-[:ISSUED_BY]->(:Organization)
+(:HeatAdvisory)-[:DEFINED_IN]->(:Document)
+""".strip()

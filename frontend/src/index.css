@@ -149,6 +149,9 @@
 
 /* Leaflet themed to the tokens */
 .leaflet-container { font-family: inherit; background: rgb(var(--sunken)); }
+.dark .map-tiles-dark {
+  filter: invert(100%) hue-rotate(180deg) brightness(85%) contrast(90%);
+}
 .leaflet-tooltip.ward-tip {
   @apply rounded text-sm text-ink bg-surface;
   border: 1px solid rgb(var(--line));

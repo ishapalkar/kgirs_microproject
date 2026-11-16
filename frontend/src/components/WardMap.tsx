@@ -75,16 +75,17 @@ export function WardMap({ geo, colorBy = 'hvi', selected, onSelect, facilities =
     }
   }, [interactive])
 
-  // Basemap tiles follow the theme
+  // Basemap tiles follow the theme (OpenStreetMap standard without API key requirement)
   useEffect(() => {
     const m = map.current
     if (!m) return
     tiles.current?.remove()
     tiles.current = null
     if (basemap) {
-      const style = theme === 'dark' ? 'dark_nolabels' : 'light_nolabels'
-      tiles.current = L.tileLayer(`https://{s}.basemaps.cartocdn.com/${style}/{z}/{x}/{y}{r}.png`, {
-        attribution: '© OpenStreetMap contributors © CARTO', subdomains: 'abcd', maxZoom: 18,
+      tiles.current = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors',
+        maxZoom: 19,
+        className: theme === 'dark' ? 'map-tiles-dark' : undefined,
       }).addTo(m)
       tiles.current.bringToBack()
     }

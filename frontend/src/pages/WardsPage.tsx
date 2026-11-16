@@ -7,7 +7,7 @@ import { CATEGORIES, int, num } from '../lib/format'
 import type { Ward, WardDetail, Weights } from '../lib/types'
 import { useApi } from '../lib/useApi'
 
-const DEFAULT: Weights = { weight_exposure: 0.4, weight_sensitivity: 0.35, weight_adaptive_capacity: 0.25 }
+const DEFAULT: Weights = { weight_exposure: 0.40, weight_sensitivity: 0.35, weight_adaptive_capacity: 0.25 }
 const SLIDERS: { key: keyof Weights; label: string; help: string }[] = [
   { key: 'weight_exposure', label: 'Heat exposure', help: 'Surface temperature and lack of vegetation' },
   { key: 'weight_sensitivity', label: 'Sensitivity', help: 'Density, slum share, young children, non-literate share' },
